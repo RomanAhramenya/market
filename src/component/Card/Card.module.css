@@ -1,32 +1,61 @@
-
-.card,.cardLink {
-  width: 50%;
+.card,
+.cardLink {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(1, 40%);
+  grid-template-rows: repeat(3, 100px);
+  
   border: 1px solid white;
   margin: 2rem 0;
   padding: 0 1rem;
   position: relative;
 }
-.cardLink{
+.card {
+ 
+  width: 80%;
+  grid-template-columns: repeat(1, 80%);
+  grid-template-rows: none;
+}
+.card .title{
+  width: 100%;
+  font-weight: 900;
+ 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis
+}
+.title {
+  width: 60%;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis
+}
+.addBasket{
+  width:100%
+}
+.cardLink {
   padding: 1rem;
   display: inline-block;
-  color:black;
-  width: 30%;
+  color: black;
   
 }
-.cardLink a{
+.cardLink a {
   text-decoration: none;
-  color:black
+  color: black;
+  
 }
 .cardLink input {
-  width: 5rem;
+  width: 5vw;
 }
 .rate {
-  display: flex;
   
+  display: flex;
 }
-.rate div:last-child{
+.rate div:last-child {
   font-size: 1rem;
-  color:rgb(255, 38, 0)
+  color: rgb(255, 38, 0);
 }
 .price {
   position: absolute;
@@ -44,11 +73,8 @@
   margin-right: 1rem;
 }
 .image img {
-  width: 10rem;
-  height: 10rem;
+  width: 15vw;
+  height: 15vw;
 }
 
-.addNotice{
-  display: flex;
-  align-items: flex-start;
-}
+

@@ -32,7 +32,7 @@ const  Card:FC<ICard> = ({data,isCards,link}) => {
     <>
      {isCards ? <div className={s.cardLink} >
       <Link to={link!}>
-        <h4>{data.title}</h4>
+        <div className={s.title}>{data.title}</div>
     <div className={s.price}>{data.price}$</div>
     <div className={s.centerContent}>
         <div className={s.image}>
@@ -41,11 +41,13 @@ const  Card:FC<ICard> = ({data,isCards,link}) => {
         <div className={s.rate}><div>{data.rating.rate}</div> <div>&#9733;</div> </div>  
     </div>
       </Link>
-    
-      <AddToBasket handleClick={handleBasket}/>
+      <div className={s.addBasket}>
+         <AddToBasket handleClick={handleBasket}/>
+      </div>
+     
     
     </div> : <div className={s.card}>
-    <h4>{data.title}</h4>
+    <h4 className={s.title}>{data.title}</h4>
     <div className={s.price}>{data.price}$</div>
     <div className={s.centerContent}>
         <div className={s.image}>
@@ -53,6 +55,7 @@ const  Card:FC<ICard> = ({data,isCards,link}) => {
         </div>
         <div>{data.description}</div>
     </div>
+    
     <CardActionp data={data}/>
       </div>}
     </>
