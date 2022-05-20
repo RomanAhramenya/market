@@ -18,13 +18,23 @@ export const UserSlice = createSlice({
     reducers:{
         setUser(state,action) {
             state.email = action.payload.email;
-            state.id = action.payload.email;
-            state.token = action.payload.email
+            state.id = action.payload.id;
+            state.token = action.payload.token
+
+            localStorage.setItem('email',action.payload.email) 
+            localStorage.setItem('id', action.payload.id)
+            localStorage.setItem('tokenRef', action.payload.token)
+          
         },
         removeUser(state) {
             state.email = null;
             state.id = null;
             state.token = null
+
+            localStorage.removeItem('token')
+            localStorage.removeItem('id')
+            localStorage.removeItem('email')
+
         }
     }
 }

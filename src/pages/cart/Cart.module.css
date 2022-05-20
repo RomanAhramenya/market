@@ -1,0 +1,48 @@
+.container{
+    
+    font-family: 'Inconsolata', monospace;
+}
+.container h2 {
+    text-align: center;
+    
+}
+.card{
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid gray;
+}
+
+.image img{
+    width: 10rem;
+    height: 10rem;
+}
+.title{
+    width: 20%;
+    font-weight: 700;
+}
+.price{
+    color:green;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.units button{
+    margin: 0;
+}
+.units button:first-child{
+    background:rgb(3, 236, 3);
+}
+.units button:nth-child(2){
+    background: orange
+}
+.units button:last-child{
+    background:red;
+}
+.totalPrice{
+    font-weight: 700;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px darkgreen;
+}

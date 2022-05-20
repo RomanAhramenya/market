@@ -1,0 +1,48 @@
+.rate {
+    position: relative;
+    display: flex;
+    align-items:center;
+    box-shadow: 0 0 10px white;
+    margin-bottom: 1.5rem;
+  }
+  .staticRate{
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .title{
+    font-family: 'Koulen', cursive;
+    margin-left: 1rem;
+  }
+  .title span{
+      font-size: 1.2rem;
+      color:orangered
+  }
+  .response{
+    font-family: 'Koulen', cursive; 
+  }
+  .stars{
+    position: relative;
+      width: 50%;
+      height: 100%;
+    
+  }
+  .stars span {
+      top:-1.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.25s;
+  }
+  .stars span:hover ~ span {
+    color: yellow;
+  }
+  .stars span:hover {
+    color: yellow;
+  }
+  .cheked{
+      color: yellow;
+  }
+  .cheked ~ span{
+    color: yellow;
+  }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useAppDispatch } from '../hooks/redux-hooks';
 import { setUser } from '../store/slice/userSlice';
 
-const LoginPage = () => {
+const RegisterPage = () => {
     const dispatch = useAppDispatch()
     const handleLogin = (email:string,password:string) => {
         const auth = getAuth();
@@ -27,13 +27,10 @@ const LoginPage = () => {
     }
   return (
     <div>
-      <h1>Registr</h1>
-            <Form handleSubmitProps={handleLogin}/>
-      <p>
-          Or <Link to='/login'>login</Link>
-      </p>
+      
+            <Form to='login' handleSubmitProps={handleLogin}/>
     </div>
   )
 }
 
-export default LoginPage
+export default RegisterPage

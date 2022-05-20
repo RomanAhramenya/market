@@ -1,0 +1,14 @@
+
+header{
+    grid-area: h;
+    grid-area: h;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+.container span{
+    font-family: 'Koulen', cursive;
+    letter-spacing: 0.1rem;
+}

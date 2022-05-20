@@ -1,0 +1,30 @@
+.card {
+  width: 50%;
+  border: 1px solid white;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  position: relative;
+}
+.price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  font-size: 20px;
+}
+.centerContent {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.image {
+  margin-right: 1rem;
+}
+.image img {
+  width: 10rem;
+}
+
+.addNotice{
+  display: flex;
+  align-items: flex-start;
+}

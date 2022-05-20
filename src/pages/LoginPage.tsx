@@ -2,24 +2,28 @@ import React from 'react'
 import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
 import { Link } from 'react-router-dom'
 import Form from '../component/form/Form';
-import { useAppSelector } from '../hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks';
+import { setUser } from '../store/slice/userSlice';
 
-const RegisterPage = () => {
+const LoginPage = () => {
 
     const state = useAppSelector(state => state.users)
-    console.log(state)
+    const dispatch = useAppDispatch()
+    
     const handleLogin = (email:string,password:string) => {
         
 
         const auth = getAuth();
-        setPersistence(auth, browserSessionPersistence)
-          .then(() => {
-            // Existing and future Auth states are now persisted in the current
-            // session only. Closing the window would clear any existing state even
-            // if a user forgets to sign out.
-            // ...
-            // New sign-in will be persisted with session persistence.
-            return signInWithEmailAndPassword(auth, email, password);
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            const email = user.email
+            const id = user.uid
+            const token = user.refreshToken
+            dispatch(setUser({
+                email,id,token
+            }))
+          
           })
           .catch((error) => {
             // Handle Errors here.
@@ -29,16 +33,11 @@ const RegisterPage = () => {
     }
     return (
         <div>
-            <h1>
-                Register
-            </h1>
-                <Form handleSubmitProps={handleLogin}/>
-            <p>
-                Or <Link to='/register'> register</Link>
-            </p>
+                <Form to='register' handleSubmitProps={handleLogin}/>
+           
 
         </div>
     )
 }
 
-export default RegisterPage
+export default LoginPage

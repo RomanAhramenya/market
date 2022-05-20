@@ -1,0 +1,15 @@
+.cartFixed{
+    position: fixed;
+    right: 1rem;
+    top:6rem;
+}
+.cartFixed button{
+    background:rgb(0, 255, 0)
+}
+.cartFixed div{
+    position: absolute;
+    left:1rem;
+    background:red;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}

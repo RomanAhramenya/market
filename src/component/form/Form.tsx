@@ -1,60 +1,62 @@
 import React, { FC } from 'react'
 import { useForm } from 'react-hook-form'
-
+import { Link, useNavigate } from 'react-router-dom'
+import s from './Form.module.css'
 
 interface IPropsForm {
     handleSubmitProps:(email: string, password: string)=>void
+    to:string
 }
-const Form: FC<IPropsForm> = ({handleSubmitProps}) => {
+const Form: FC<IPropsForm> = ({handleSubmitProps,to}) => {
+    const navigate = useNavigate()
     const {
         register, formState: {
             errors,
-            isValid
         },
         handleSubmit,
         reset
     } = useForm({
         mode:"onBlur"
     })
-    interface ISubmit {
-        email:string
-        password:string
-    }
+  
     const onSubmit = (data:any) => {
-        console.log(data)
         handleSubmitProps(data.email,data.password)
         reset()
+        navigate('/')
     }
     
 
 
     return (
-        <div>
+        <div className={s.container}>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
+                <div className={s.field}>
                         <label>Email</label>
-                    <input 
+                    <input type='email'
                         {...register('email', {
-                            required: "заполните поле",
+                            required: "empty field",
                         })}
                     />
-                    {errors?.firstName && <span>{errors?.firstName?.message || "Error"}</span>}
+                    {errors?.email && <span className={s.error}><span>&#9888;</span>{errors?.email?.message || "Error"}</span>}
                 </div>
-                <div>
+                <div className={s.field}>
                         <label>Password</label>
                     <input 
                     type='password'
                         {...register('password', {
-                            required: "заполните поле",
+                            required: "empty field",
                             minLength: {
                                 value:8,
-                                message:'минимальное число симолов 8'
+                                message:'min 8'
                             }
                         })}
                     />
-                    {errors?.firstName && <span>{errors?.firstName?.message || "Error"}</span>}
+                    {errors?.password && <span className={s.error}><span>&#9888;</span>{ errors?.password?.message || "Error"}</span>}
                 </div>
-                <input type='submit' disabled={!isValid} />
+                {to === 'login' && <button>Register</button>}
+                {to === 'register' && <button>Login</button>}
+                Or <Link to={`/${to}`}>{to}</Link>
+            
             </form>
         </div>
         

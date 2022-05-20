@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Koulen&display=swap');
+
+ button{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-family: 'Inconsolata', monospace;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border:1px solid gray;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+ button:hover{
+    border-color: black;
+}

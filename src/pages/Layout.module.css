@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 4rem 9fr 4rem;
+    grid-template-areas :
+    "h h " 
+    "nav body" 
+    "foot foot";
+    
+}
+
+nav {
+    padding: 2rem;
+    grid-area: nav;
+    border-right: 1px solid white;
+   
+}
+nav div{
+    padding: 0.3rem;
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+nav div:hover{
+    background:rgba(128, 128, 128, 0.616);
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+main{
+    grid-area: body;
+}
+
+footer{
+    grid-area: foot;
+}
+.add{
+    background:green
+}
