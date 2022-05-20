@@ -29,6 +29,7 @@ export interface IGetCurrentPorjectAxios {
 }
 export interface IBasket {
   id:number
+  category:string
   title:string
   price:number
   image:string

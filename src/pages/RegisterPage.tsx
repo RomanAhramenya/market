@@ -28,7 +28,7 @@ const RegisterPage = () => {
   return (
     <div>
       
-            <Form to='login' handleSubmitProps={handleLogin}/>
+            <Form back='/cart' to='login' handleSubmitProps={handleLogin}/>
     </div>
   )
 }

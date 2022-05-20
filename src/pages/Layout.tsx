@@ -8,6 +8,7 @@ import CartFixed from '../component/cartFixed/CartFixed'
 
 
 
+
 const Layout = () => {
 
   return (
@@ -26,7 +27,7 @@ const Layout = () => {
         <div>
           <CustomLink to="/women's clothing">Women`s clothing</CustomLink>
         </div>
-
+      
 
 
 

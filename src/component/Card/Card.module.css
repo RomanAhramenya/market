@@ -1,9 +1,32 @@
-.card {
+
+.card,.cardLink {
   width: 50%;
   border: 1px solid white;
   margin: 2rem 0;
   padding: 0 1rem;
   position: relative;
+}
+.cardLink{
+  padding: 1rem;
+  display: inline-block;
+  color:black;
+  width: 30%;
+  
+}
+.cardLink a{
+  text-decoration: none;
+  color:black
+}
+.cardLink input {
+  width: 5rem;
+}
+.rate {
+  display: flex;
+  
+}
+.rate div:last-child{
+  font-size: 1rem;
+  color:rgb(255, 38, 0)
 }
 .price {
   position: absolute;
@@ -22,6 +45,7 @@
 }
 .image img {
   width: 10rem;
+  height: 10rem;
 }
 
 .addNotice{

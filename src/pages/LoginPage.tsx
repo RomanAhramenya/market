@@ -33,7 +33,7 @@ const LoginPage = () => {
     }
     return (
         <div>
-                <Form to='register' handleSubmitProps={handleLogin}/>
+                <Form back='/cart' to='register' handleSubmitProps={handleLogin}/>
            
 
         </div>

@@ -21,6 +21,7 @@ const CardActionp:FC<IProps> = ({data}) => {
           id:data.id,
           data:{
             id:data.id,
+            category:data.category,
       title:data.title,
       price:data.price,
       image:data.image,

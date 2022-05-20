@@ -6,8 +6,9 @@ import s from './Form.module.css'
 interface IPropsForm {
     handleSubmitProps:(email: string, password: string)=>void
     to:string
+    back:string
 }
-const Form: FC<IPropsForm> = ({handleSubmitProps,to}) => {
+const Form: FC<IPropsForm> = ({handleSubmitProps,to,back}) => {
     const navigate = useNavigate()
     const {
         register, formState: {
@@ -22,7 +23,7 @@ const Form: FC<IPropsForm> = ({handleSubmitProps,to}) => {
     const onSubmit = (data:any) => {
         handleSubmitProps(data.email,data.password)
         reset()
-        navigate('/')
+        navigate(back)
     }
     
 

@@ -15,7 +15,13 @@
     margin-bottom: 2rem;
     border-bottom: 1px solid gray;
 }
-
+.card a {
+    text-decoration: none;
+    color:black
+}
+.back{
+    margin: 1rem;
+}
 .image img{
     width: 10rem;
     height: 10rem;
@@ -28,9 +34,15 @@
     color:green;
     font-weight: 900;
     font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+.units span{
+    margin-right: 1rem;
+    font-weight: 900;
 }
 .units button{
-    margin: 0;
+    margin: 0.2rem;
+    background:rgb(3, 236, 3);
 }
 .units button:first-child{
     background:rgb(3, 236, 3);
