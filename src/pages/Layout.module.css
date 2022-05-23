@@ -1,6 +1,6 @@
 .container{
     display: grid;
-    grid-template-columns:repeat(2);
+    grid-template-columns:2fr 10fr;
     grid-template-rows: 4rem 9fr 4rem;
     grid-template-areas :
     "h h " 

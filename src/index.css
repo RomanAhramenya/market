@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(90deg,rgb(167, 162, 162),lightgray);
   box-sizing: border-box;
+  min-width: 1170px;
 }
 
 code {

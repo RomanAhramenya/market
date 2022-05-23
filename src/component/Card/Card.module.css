@@ -1,17 +1,15 @@
 .card,
 .cardLink {
-  width: 40%;
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(1, 40%);
   grid-template-rows: repeat(3, 100px);
-  
   border: 1px solid white;
   margin: 2rem 0;
   padding: 0 1rem;
   position: relative;
 }
 .card {
- 
   width: 80%;
   grid-template-columns: repeat(1, 80%);
   grid-template-rows: none;
@@ -39,7 +37,7 @@
   padding: 1rem;
   display: inline-block;
   color: black;
-  
+  width:30%;
 }
 .cardLink a {
   text-decoration: none;
