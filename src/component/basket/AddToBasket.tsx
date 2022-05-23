@@ -11,7 +11,6 @@ interface IProps{
 const AddToBasket:FC<IProps> = ({handleClick}) => {
   const state = useAppSelector(state => state.basket)
   const [count,setCount] = useState(1)
-  console.log(state)
  const handleAdd = () => {
   handleClick(String(count))
   setCount(count+1)
